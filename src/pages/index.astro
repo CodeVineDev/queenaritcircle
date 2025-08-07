@@ -15,23 +15,23 @@ import "../components/Fonts.astro";
   <section class="mt-12 flex items-center justify-center pt-2 pb-20">
     <div class="m-auto w-[min(95%,1000px)] py-8 text-center tracking-wider">
       <p
-        class="m-auto mb-6 w-max rounded-4xl border border-gray-200 px-5 py-2 text-sm font-bold text-(--blue) shadow-xl"
+        class="m-auto mb-8 sm:mb-6 w-max rounded-4xl border border-gray-200 px-5 py-2 text-sm font-bold text-(--blue) shadow-xl"
       >
         Tech Community
       </p>
       <h1
-        class="mb-6 font-[(--mulish)] text-[clamp(35px,5vw,50px)] leading-[1.2] font-bold [text-wrap:balance] text-(--blue) sm:text-[clamp(50px,5vw,60px)] lg:text-[clamp(70px,5vw,80px)]"
+        class="sm:mb-8 mb-6 font-[(--mulish)] text-[clamp(35px,5vw,50px)] leading-[1.2] font-bold [text-wrap:balance] text-(--blue) sm:text-[clamp(50px,5vw,60px)] lg:text-[clamp(70px,5vw,80px)]"
       >
         Go from Learning to Earning
       </h1>
       <p
-        class="mb-6 text-[clamp(14px,5vw,16px)] leading-[1.5] [text-wrap:balance] text-gray-600 sm:text-[clamp(16px,5vw,18px)]"
+        class="mb-8 sm:mb-6 text-[clamp(14px,5vw,16px)] leading-[1.5] [text-wrap:balance] text-gray-600 sm:text-[clamp(16px,5vw,18px)]"
       >
         Master the interviewing, collaboration, and leadership skills that
         actually get you hired and promoted in tech
       </p>
       <div
-        class="m-auto grid w-[min(90%,600px)] grid-cols-1 gap-4 sm:grid-cols-2"
+        class="m-auto grid w-[min(90%,600px)] grid-cols-1 gap-8 sm:grid-cols-2"
       >
         <button
           ><a
@@ -57,7 +57,7 @@ import "../components/Fonts.astro";
         >
       </div>
       <div
-        class="mt-6 flex flex-wrap items-center justify-center gap-2 text-lg text-gray-600"
+        class="mt-8 sm:mt-6 flex flex-wrap items-center justify-center gap-2 text-lg text-gray-600"
       >
         <div class="flex w-full justify-center">
           <img
@@ -92,7 +92,9 @@ import "../components/Fonts.astro";
   </section>
   <!-- End of hero page -->
   <!-- Arit speech start -->
-  <section class="bg-pink-50/50 py-20 text-gray-800">
+  <section
+    class="data-aos= bg-pink-50/50 py-20 text-gray-800" 
+  >
     <div
       class="m-auto w-[min(95%,600px)] rounded-4xl border border-gray-200 bg-white p-8 shadow-2xl sm:p-12"
     >
@@ -265,7 +267,7 @@ import "../components/Fonts.astro";
 
     <!-- Benefits of Community end -->
   </section>
-   <Event />
+  <Event />
   <!-- Testimonal start -->
   <section class="py-20">
     <div class="m-auto w-[min(95%,1150px)]">

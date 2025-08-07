@@ -1,7 +1,6 @@
 ---
 import "../styles/global.css";
-import "aos/dist/aos.css";
-
+import "../components/Fonts.astro" 
 ---
 
 <!doctype html>
@@ -11,40 +10,33 @@ import "aos/dist/aos.css";
     <meta name="viewport" content="width=device-width" />
     <title>The Arit Circle</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <slot />
 
     <!-- ICONIFY -->
-    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <script
+      src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"
+    ></script>
 
-    <!-- Your other scripts (but move big ones to client-side if possible) -->
-     <script is:inline src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <!-- <script is:inline src="./node_modules/lodash/lodash.js"></script> -->
-    <script is:inline src="./node_modules/datatables.net/js/dataTables.min.js"
-    ></script>
-    <script is:inline src="./node_modules/dropzone/dist/dropzone-min.js"
-    ></script>
-    <script is:inline src="./node_modules/nouislider/dist/nouislider.min.js"
-    ></script>
-    <script is:inline src="./node_modules/vanilla-calendar-pro/index.js"
-    ></script>
 
     <!-- Preline UI -->
-    <script src="https://cdn.jsdelivr.net/npm/preline@2.0.3/dist/preline.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/preline@2.0.3/dist/preline.min.js"
+    ></script>
 
-    
+   <script type="module" src="../scripts/initAOS.js"></script>
+   <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 
-    <!-- ✅ AOS Initialization -->
-    <script type="module">
+
+
+    <!-- <script type="module">
       import AOS from 'aos';
       AOS.init({
         once: true,
         easing: 'ease-out',
         duration: 800,
-      });
-    </script>
+      }); -->
   </body>
 </html>
