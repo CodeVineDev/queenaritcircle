@@ -1,11 +1,394 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Event from "../components/Events.astro";
+import Blog from "../components/MyBlog.astro";
+import Footer from "../components/MyFooter.astro";
+import "../components/Fonts.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout class="relative">
+  <div class="absolute h-23 w-full bg-gradient-to-b from-(--pink) to-white">
+  </div>
+  <Navbar client:idle />
+  <!-- Hero page start -->
+  <section class="mt-12 flex items-center justify-center pt-2 pb-20">
+    <div class="m-auto w-[min(95%,1000px)] py-8 text-center tracking-wider">
+      <p
+        class="m-auto mb-6 w-max rounded-4xl border border-gray-200 px-5 py-2 text-sm font-bold text-(--blue) shadow-xl"
+      >
+        Tech Community
+      </p>
+      <h1
+        class="mb-6 font-[(--mulish)] text-[clamp(35px,5vw,50px)] leading-[1.2] font-bold [text-wrap:balance] text-(--blue) sm:text-[clamp(50px,5vw,60px)] lg:text-[clamp(70px,5vw,80px)]"
+      >
+        Go from Learning to Earning
+      </h1>
+      <p
+        class="mb-6 text-[clamp(14px,5vw,16px)] leading-[1.5] [text-wrap:balance] text-gray-600 sm:text-[clamp(16px,5vw,18px)]"
+      >
+        Master the interviewing, collaboration, and leadership skills that
+        actually get you hired and promoted in tech
+      </p>
+      <div
+        class="m-auto grid w-[min(90%,600px)] grid-cols-1 gap-4 sm:grid-cols-2"
+      >
+        <button
+          ><a
+            href="#"
+            class="group flex items-center justify-center gap-4 rounded-[10rem] border border-(--blue) px-2 py-4 text-[16px] font-bold text-(--blue) shadow-xl transition-all duration-200 ease-in-out hover:shadow-none"
+            >See Upcoming Events <iconify-icon
+              icon="teenyicons:top-right-outline"
+              class="text-(--blue) transition-all duration-200 ease-in-out group-hover:rotate-45"
+              width="15"
+              height="15"></iconify-icon></a
+          ></button
+        >
+        <button
+          ><a
+            href="#"
+            class="group flex items-center justify-center gap-4 rounded-[10rem] border border-(--pink) bg-(--pink) px-2 py-4 text-[16px] font-bold text-white transition-all duration-200 ease-in-out hover:border-(--blue) hover:bg-(--blue)"
+            ><iconify-icon
+              icon="line-md:plus"
+              class="rounded-4xl border border-white text-white transition-all duration-200 ease-in-out group-hover:rotate-90"
+              width="20"
+              height="20"></iconify-icon> Join the Circle</a
+          ></button
+        >
+      </div>
+      <div
+        class="mt-6 flex flex-wrap items-center justify-center gap-2 text-lg text-gray-600"
+      >
+        <div class="flex w-full justify-center">
+          <img
+            class="w-8 translate-x-4 rounded-[50%] border-4 border-white shadow-lg"
+            src="../../public/images/AT-IMG.jpg"
+            alt="Atom Image"
+          />
+          <img
+            class="w-8 translate-x-2 rounded-[50%] border-4 border-white shadow-lg"
+            src="../../public/images/MA-IMG.jpg"
+            alt="Miracle Image"
+          />
+          <img
+            class="w-8 rounded-[50%] border-4 border-white shadow-lg"
+            src="../../public/images/QT-IMG.jpg"
+            alt="Qtguru Image"
+          />
+          <img
+            class="w-8 -translate-x-2 rounded-[50%] border-4 border-white shadow-lg"
+            src="../../public/images/GD-IMG.jpg"
+            alt="Giztek Image"
+          />
+          <img
+            class="z-1 w-8 -translate-x-4 rounded-[50%] border-4 border-white shadow-lg"
+            src="../../public/images/TB-IMG.jpg"
+            alt="Technical Ben Image"
+          />
+        </div>
+        <p>1000+ Members</p>
+      </div>
+    </div>
+  </section>
+  <!-- End of hero page -->
+  <!-- Arit speech start -->
+  <section class="bg-pink-50/50 py-20 text-gray-800">
+    <div
+      class="m-auto w-[min(95%,600px)] rounded-4xl border border-gray-200 bg-white p-8 shadow-2xl sm:p-12"
+    >
+      <!-- Heading -->
+      <h2
+        class="mb-10 text-center text-xl font-bold [text-wrap:balance] text-(--blue) sm:text-3xl"
+      >
+        From Learning to Earning: Let’s Bridge the Gap
+        <div class="m-auto mt-2 h-[1px] w-full rounded-2xl bg-(--pink)"></div>
+      </h2>
+
+      <!-- Paragraphs -->
+      <div
+        class="max-w-prose space-y-6 text-[clamp(14px,5vw,16px)] leading-relaxed tracking-wide [text-wrap:pretty]"
+      >
+        <p>
+          In tech, the transition from <strong class="text-gray-700"
+            >learning</strong
+          > to <strong class="text-gray-700">earning</strong> is often filled with
+          challenges, disappointments, and distractions.
+        </p>
+
+        <p>
+          <strong class="text-gray-700">My community's mission</strong> is to provide
+          real opportunities that strengthen the skills that truly move your tech
+          career forward.
+        </p>
+
+        <!-- Skills List -->
+        <ul class="list-inside list-disc space-y-2 pl-4 text-gray-700">
+          <li><strong class="text-gray-700">Effective Interviewing</strong></li>
+          <li><strong class="text-gray-700">Tech Collaboration</strong></li>
+          <li><strong class="text-gray-700">Team Leadership</strong></li>
+          <li><strong class="text-gray-700">Engaging Storytelling</strong></li>
+          <li>...and much more.</li>
+        </ul>
+
+        <p>
+          We support early-career and mid-level tech professionals: software
+          developers, PMs, designers, data analysts, cybersecurity experts, VAs,
+          and more.
+        </p>
+
+        <p>
+          If you're still learning the basics of your tech field — you are
+          welcome here too!
+        </p>
+      </div>
+
+      <!-- Author -->
+      <div class="mt-10 flex items-center gap-4">
+        <img
+          src="../../public/images/QA-IMG.webp"
+          class="h-14 w-14 rounded-full object-cover shadow-md"
+          alt="Queen Arit Image"
+        />
+        <p class="text-lg font-semibold text-(--blue)">Queen Arit</p>
+      </div>
+    </div>
+  </section>
+  <!-- Arit speech end -->
+  <Event />
+  <!-- Benefits of Community start -->
+  <section
+    class="relative flex overflow-hidden bg-white py-20 text-center text-(--blue)"
+  >
+    <div class="z-1 m-auto w-[min(90%,1152px)]">
+      <h2
+        class="m-auto mb-10 w-[min(90%,950px)] text-center text-xl font-bold [text-wrap:balance] text-(--blue) sm:text-3xl"
+      >
+        Be part of a community that gives you front-row access to the support
+        and tools you need to scale your tech journey.
+      </h2>
+      <div
+        class="mb-10 grid [grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))] gap-8"
+      >
+        <div
+          class="items-center rounded-4xl border border-gray-300 px-4 py-10 shadow-2xl shadow-gray-200"
+        >
+          <h4
+            class="mb-8 border-b border-b-(--pink) pb-4 text-xl font-semibold [text-wrap:balance] text-(--blue)"
+          >
+            Access to Exclusive Resources & Opportunities
+          </h4>
+          <p
+            class="text-[14px] leading-[1.5] tracking-wider [text-wrap:pretty] text-gray-700 sm:text-[16px]"
+          >
+            From job-ready tools and roadmaps to insider tips and project
+            feedback, you'll get access to things the average learner won't.
+          </p>
+        </div>
+        <div
+          class="items-center rounded-4xl border border-gray-300 px-4 py-10 shadow-2xl shadow-gray-200"
+        >
+          <h4
+            class="mb-8 border-b border-b-(--pink) pb-4 text-xl font-semibold [text-wrap:balance] text-(--blue)"
+          >
+            Direct Support on Your Tech Journey
+          </h4>
+          <p
+            class="text-[14px] leading-[1.5] tracking-wider [text-wrap:pretty] text-gray-700 sm:text-[16px]"
+          >
+            Get answers to your questions, overcome roadblocks faster, and
+            receive the guidance you need from people who’ve been there.
+          </p>
+        </div>
+        <div
+          class="items-center rounded-4xl border border-gray-300 px-4 py-10 shadow-2xl shadow-gray-200"
+        >
+          <h4
+            class="mb-8 border-b border-b-(--pink) pb-4 text-xl font-semibold [text-wrap:balance] text-(--blue)"
+          >
+            Be Part of a Motivated Tribe
+          </h4>
+          <p
+            class="text-[14px] leading-[1.5] tracking-wider [text-wrap:pretty] text-gray-700 sm:text-[16px]"
+          >
+            Surround yourself with like-minded tech learners who push,
+            challenge, and grow with you. No more growth in isolation.
+          </p>
+        </div>
+      </div>
+      <a
+        type="button"
+        href="#"
+        class="group m-auto flex w-[min(95%,350px)] items-center justify-center gap-4 rounded-[10rem] border border-(--pink) bg-(--pink) px-2 py-4 text-[16px] font-bold text-white transition-all duration-200 ease-in-out hover:border-(--blue) hover:bg-(--blue)"
+        ><iconify-icon
+          icon="line-md:plus"
+          class="rounded-4xl border border-white text-white transition-all duration-200 ease-in-out group-hover:rotate-90"
+          width="20"
+          height="20"></iconify-icon> Join the Circle</a
+      >
+      <div
+        class="m-auto my-6 flex flex-wrap items-center justify-center gap-2 text-lg text-gray-600"
+      >
+        <div class="flex w-full justify-center">
+          <img
+            class="w-8 translate-x-4 rounded-[50%] border-4 border-white shadow-lg"
+            src="../../public/images/AT-IMG.jpg"
+            alt="Atom Image"
+          />
+          <img
+            class="w-8 translate-x-2 rounded-[50%] border-4 border-white shadow-lg"
+            src="../../public/images/MA-IMG.jpg"
+            alt="Miracle Image"
+          />
+          <img
+            class="w-8 rounded-[50%] border-4 border-white shadow-lg"
+            src="../../public/images/QT-IMG.jpg"
+            alt="Qtguru Image"
+          />
+          <img
+            class="w-8 -translate-x-2 rounded-[50%] border-4 border-white shadow-lg"
+            src="../../public/images/GD-IMG.jpg"
+            alt="Giztek Image"
+          />
+          <img
+            class="z-1 w-8 -translate-x-4 rounded-[50%] border-4 border-white shadow-lg"
+            src="../../public/images/TB-IMG.jpg"
+            alt="Technical Ben Image"
+          />
+        </div>
+        <p>Join 1000+ Members</p>
+      </div>
+    </div>
+    <div
+      class="absolute -bottom-[40%] left-[50%] h-[30rem] w-[30rem] -translate-x-[50%] rounded-full blur-2xl"
+      style="background: radial-gradient(circle, var(--pink) 0%, transparent 70%);"
+    >
+    </div>
+
+    <!-- Benefits of Community end -->
+  </section>
+  <!-- Testimonal start -->
+  <section class="py-20">
+    <div class="m-auto w-[min(95%,1150px)]">
+      <h2
+        class="mb-10 text-center text-xl font-bold [text-wrap:balance] text-(--blue) sm:text-3xl"
+      >
+        Members Testimonials
+      </h2>
+      <div
+        class="grid [grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))] gap-8"
+      >
+        <div class="rounded-4xl border border-gray-300 px-6 py-10 shadow-xl">
+          <p>
+            Before joining this community, I felt lost in my tech journey. But
+            now, I’ve got constant support, real feedback, and people who
+            actually get what I’m building. It's like having a tech family
+            backing me up!
+          </p>
+          <div class="mt-10 flex items-center gap-2">
+            <img
+              src="../../public/images/QA-IMG.webp"
+              class="h-7 w-7 rounded-full object-cover shadow-md"
+              alt="Queen Arit Image"
+            />
+            <p class="text-sm font-semibold text-(--blue)">
+              Amina B., <span class="text-gray-400">Front-End Developer</span>
+            </p>
+          </div>
+        </div>
+        <div class="rounded-4xl border border-gray-300 px-6 py-10 shadow-xl">
+          <p>
+            Before joining this community, I felt lost in my tech journey. But
+            now, I’ve got constant support, real feedback, and people who
+            actually get what I’m building. It's like having a tech family
+            backing me up!
+          </p>
+          <div class="mt-10 flex items-center gap-2">
+            <img
+              src="../../public/images/QA-IMG.webp"
+              class="h-7 w-7 rounded-full object-cover shadow-md"
+              alt="Queen Arit Image"
+            />
+            <p class="text-sm font-semibold text-(--blue)">
+              Amina B., <span class="text-gray-400">Front-End Developer</span>
+            </p>
+          </div>
+        </div>
+        <div class="rounded-4xl border border-gray-300 px-6 py-10 shadow-xl">
+          <p>
+            Before joining this community, I felt lost in my tech journey. But
+            now, I’ve got constant support, real feedback, and people who
+            actually get what I’m building. It's like having a tech family
+            backing me up!
+          </p>
+          <div class="mt-10 flex items-center gap-2">
+            <img
+              src="../../public/images/QA-IMG.webp"
+              class="h-7 w-7 rounded-full object-cover shadow-md"
+              alt="Queen Arit Image"
+            />
+            <p class="text-sm font-semibold text-(--blue)">
+              Amina B., <span class="text-gray-400">Front-End Developer</span>
+            </p>
+          </div>
+        </div>
+        <div class="rounded-4xl border border-gray-300 px-6 py-10 shadow-xl">
+          <p>
+            Before joining this community, I felt lost in my tech journey. But
+            now, I’ve got constant support, real feedback, and people who
+            actually get what I’m building. It's like having a tech family
+            backing me up!
+          </p>
+          <div class="mt-10 flex items-center gap-2">
+            <img
+              src="../../public/images/QA-IMG.webp"
+              class="h-7 w-7 rounded-full object-cover shadow-md"
+              alt="Queen Arit Image"
+            />
+            <p class="text-sm font-semibold text-(--blue)">
+              Amina B., <span class="text-gray-400">Front-End Developer</span>
+            </p>
+          </div>
+        </div>
+        <div class="rounded-4xl border border-gray-300 px-6 py-10 shadow-xl">
+          <p>
+            Before joining this community, I felt lost in my tech journey. But
+            now, I’ve got constant support, real feedback, and people who
+            actually get what I’m building. It's like having a tech family
+            backing me up!
+          </p>
+          <div class="mt-10 flex items-center gap-2">
+            <img
+              src="../../public/images/QA-IMG.webp"
+              class="h-7 w-7 rounded-full object-cover shadow-md"
+              alt="Queen Arit Image"
+            />
+            <p class="text-sm font-semibold text-(--blue)">
+              Amina B., <span class="text-gray-400">Front-End Developer</span>
+            </p>
+          </div>
+        </div>
+        <div class="rounded-4xl border border-gray-300 px-6 py-10 shadow-xl">
+          <p>
+            Before joining this community, I felt lost in my tech journey. But
+            now, I’ve got constant support, real feedback, and people who
+            actually get what I’m building. It's like having a tech family
+            backing me up!
+          </p>
+          <div class="mt-10 flex items-center gap-2">
+            <img
+              src="../../public/images/QA-IMG.webp"
+              class="h-7 w-7 rounded-full object-cover shadow-md"
+              alt="Queen Arit Image"
+            />
+            <p class="text-sm font-semibold text-(--blue)">
+              Amina B., <span class="text-gray-400">Front-End Developer</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonal end -->
+  <Blog />
+  <Footer />
 </Layout>

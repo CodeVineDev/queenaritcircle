@@ -1,22 +1,47 @@
+---
+import "../styles/global.css";
+import "aos/dist/aos.css";
+
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>The Arit Circle</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <slot />
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+    <!-- ICONIFY -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+
+    <!-- Your other scripts (but move big ones to client-side if possible) -->
+     <script is:inline src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script is:inline src="./node_modules/lodash/lodash.js"></script> -->
+    <script is:inline src="./node_modules/datatables.net/js/dataTables.min.js"
+    ></script>
+    <script is:inline src="./node_modules/dropzone/dist/dropzone-min.js"
+    ></script>
+    <script is:inline src="./node_modules/nouislider/dist/nouislider.min.js"
+    ></script>
+    <script is:inline src="./node_modules/vanilla-calendar-pro/index.js"
+    ></script>
+
+    <!-- Preline UI -->
+    <script is:inline src="./node_modules/preline/dist/index.js"></script>
+
+    <!-- ✅ AOS Initialization -->
+    <script type="module">
+      import AOS from 'aos';
+      AOS.init({
+        once: true,
+        easing: 'ease-out',
+        duration: 800,
+      });
+    </script>
+  </body>
+</html>

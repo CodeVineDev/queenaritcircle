@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+import aritLogo from "../assets/images/aritlogo.png";
+---
+
+<footer class="bg-gray-900 px-6 py-10 text-gray-300">
+  <div class="m-auto w-[min(90%,1152px)]">
+    <!-- Left section: About / Links -->
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+      <div>
+        <a
+          class="flex-none font-semibold mb-8 focus:opacity-80 focus:outline-hidden"
+          href="#"
+          aria-label="Brand"
+        >
+          <span
+            class="inline-flex items-center gap-x-2 font-[(--mulish)] text-sm font-semibold text-white md:text-lg"
+          >
+            <Image
+              src={aritLogo}
+              alt="Arit Circle photo"
+              width={40}
+              format="webp"
+              quality={100}
+              class="rounded-sm shadow-lg"
+            />
+            The Queen Arit Circle
+          </span>
+        </a>
+        <p class="mb-8 text-sm tracking-wider">
+          A place where techies grow, build, and connect. Join us and level up
+          your tech journey.
+        </p>
+        <a
+          type="button"
+          href="#"
+          class="group mb-8 flex w-[min(95%,350px)] items-center justify-center gap-4 rounded-[10rem] border border-(--pink) bg-(--pink) px-2 py-4 text-[16px] font-bold text-white transition-all duration-200 ease-in-out hover:border-(--blue) hover:bg-(--blue)"
+          ><iconify-icon
+            icon="line-md:plus"
+            class="rounded-4xl border border-white text-white transition-all duration-200 ease-in-out group-hover:rotate-90"
+            width="20"
+            height="20"></iconify-icon> Join the Circle</a
+        >
+      </div>
+      <div>
+        <ul class="mb-10 space-y-2 text-[16px] tracking-wider">
+          <li><a href="#" class="transition hover:text-white">About</a></li>
+          <li><a href="#" class="transition hover:text-white">Blog</a></li>
+          <li><a href="#" class="transition hover:text-white">Events</a></li>
+          <li><a href="#" class="transition hover:text-white">Contact</a></li>
+        </ul>
+        <div class="mb-6 text-[16px] tracking-wider flex space-x-4 md:mb-0">
+          <a href="#" class="transition hover:text-white">Twitter</a>
+          <a href="#" class="transition hover:text-white">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right section: Socials / Copyright -->
+    <div class="flex h-full w-full flex-col justify-between">
+      <p class="text-xs text-gray-400">
+        &copy; 2025 Queen Arit Circle. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

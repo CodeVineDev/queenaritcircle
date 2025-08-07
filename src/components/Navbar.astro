@@ -1,0 +1,111 @@
+---
+import { Image } from "astro:assets";
+import aritLogo from "../assets/images/aritlogo.png";
+---
+
+<header
+  class="sticky top-4 z-100 m-auto flex w-[min(95%,1200px)] flex-wrap rounded-2xl bg-white py-4 text-sm shadow-2xl shadow-gray-300 sm:flex-nowrap sm:justify-start sm:rounded-[10rem] sm:py-2"
+>
+  <nav
+    class="mx-auto flex w-full max-w-[85rem] basis-full flex-wrap items-center justify-between px-4 sm:pr-2 sm:pl-10"
+  >
+    <a
+      class="flex-none font-semibold focus:opacity-80 focus:outline-hidden"
+      href="#"
+      aria-label="Brand"
+    >
+      <span
+        class="inline-flex items-center gap-x-2 font-[(--mulish)] text-sm font-semibold text-(--blue) md:text-lg"
+      >
+        <Image
+          src={aritLogo}
+          alt="Arit Circle photo"
+          width={40}
+          format="webp"
+          quality={100}
+          class="rounded-sm shadow-lg"
+        />
+        The Queen Arit Circle
+      </span>
+    </a>
+    <div class="flex items-center gap-x-2 sm:order-3">
+      <button
+        type="button"
+        class="hs-collapse-toggle relative flex size-9 items-center justify-center gap-x-2 rounded-xl border border-(--pink) shadow-2xs hover:bg-gray-50 focus:bg-gray-50 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 sm:hidden"
+        id="hs-navbar-alignment-collapse"
+        aria-expanded="false"
+        aria-controls="hs-navbar-alignment"
+        aria-label="Toggle navigation"
+        data-hs-collapse="#hs-navbar-alignment"
+      >
+        <svg
+          class="hs-collapse-open:hidden size-4 shrink-0 text-(--pink)"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><line x1="3" x2="21" y1="6" y2="6"></line><line
+            x1="3"
+            x2="21"
+            y1="12"
+            y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg
+        >
+        <svg
+          class="hs-collapse-open:block hidden size-4 shrink-0 text-(--pink)"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg
+        >
+        <span class="sr-only text-(--blue)">Toggle</span>
+      </button>
+      <button
+        type="button"
+        class="hidden items-center gap-x-2 rounded-[10rem] border bg-(--pink) px-5 py-6 text-[14px] font-medium tracking-wide text-white shadow-2xs transition-all duration-200 ease-in-out hover:bg-(--blue) focus:bg-gray-50 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 sm:block md:text-[16px]"
+      >
+        Join The Circle
+      </button>
+    </div>
+    <div
+      id="hs-navbar-alignment"
+      class="hs-collapse hidden grow basis-full overflow-hidden py-6 transition-all duration-300 sm:order-2 sm:block sm:grow-0 sm:basis-auto"
+      aria-labelledby="hs-navbar-alignment-collapse"
+    >
+      <div
+        class="mt-5 flex flex-col gap-6 text-[14px] sm:mt-0 sm:flex-row sm:items-center sm:ps-5 md:text-[16px]"
+      >
+        <a
+          class="text-(--blue) hover:text-(--pink) focus:text-(--pink) focus:outline-hidden"
+          href="#"
+          aria-current="page">About</a
+        >
+        <a
+          class="text-(--blue) hover:text-(--pink) focus:text-(--pink) focus:outline-hidden"
+          href="#"
+          aria-current="page">Events</a
+        >
+        <a
+          class="text-(--blue) hover:text-(--pink) focus:text-(--pink) focus:outline-hidden"
+          href="#">Blog</a
+        >
+        <a
+          type="button"
+          href="#"
+          class="items-center gap-x-2 rounded-[10rem] border bg-(--pink) px-5 py-4 text-center text-[14px] font-medium tracking-wide text-white shadow-2xs transition-all duration-200 ease-in-out hover:bg-(--blue) focus:bg-gray-50 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 sm:hidden md:text-[16px]"
+          >Join the Circle</a
+        >
+      </div>
+    </div>
+  </nav>
+</header>
