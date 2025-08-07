@@ -2,9 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Event from "../components/Events.astro";
-import Blog from "../components/MyBlog.astro";
 import Footer from "../components/MyFooter.astro";
 import "../components/Fonts.astro";
+import { Image } from "astro:assets";
+import aritLogo from "../assets/images/aritlogo.png";
 ---
 
 <Layout class="relative">
@@ -12,23 +13,41 @@ import "../components/Fonts.astro";
   </div>
   <Navbar />
   <!-- Hero page start -->
-  <section class="mt-12 flex items-center justify-center pt-2 pb-20">
-    <div class="m-auto w-[min(95%,1000px)] py-8 text-center tracking-wider">
+  <section class="flex items-center justify-center py-20">
+    <div class="m-auto w-[min(95%,1000px)] pt-15 pb-8 text-center tracking-wider">
       <p
-        class="m-auto mb-8 sm:mb-6 w-max rounded-4xl border border-gray-200 px-5 py-2 text-sm font-bold text-(--blue) shadow-xl"
+        class="m-auto mb-8 w-max rounded-4xl border border-gray-200 px-5 py-3 text-sm font-bold text-(--blue) shadow-xl sm:mb-6"
       >
-        Tech Community
+        <a
+          class="flex font-semibold focus:opacity-80 focus:outline-hidden"
+          href="#"
+          aria-label="Brand"
+        >
+          <span
+            class="inline-flex items-center gap-x-2 font-[(--mulish)] text-sm font-semibold text-(--blue) md:text-lg"
+          >
+            <Image
+              src={aritLogo}
+              alt="Arit Circle photo"
+              width={30}
+              format="webp"
+              quality={100}
+              class="rounded-sm shadow-lg"
+            />
+            The Queen Arit Circle
+          </span>
+        </a>
       </p>
       <h1
-        class="sm:mb-8 mb-6 font-[(--mulish)] text-[clamp(35px,5vw,50px)] leading-[1.2] font-bold [text-wrap:balance] text-(--blue) sm:text-[clamp(50px,5vw,60px)] lg:text-[clamp(70px,5vw,80px)]"
+        class="mb-6 font-[(--mulish)] text-[clamp(35px,5vw,50px)] leading-[1.2] font-bold [text-wrap:balance] text-(--blue) sm:mb-8 sm:text-[clamp(50px,5vw,60px)] lg:text-[clamp(70px,5vw,80px)]"
       >
         Go from Learning to Earning
       </h1>
       <p
-        class="mb-8 sm:mb-6 text-[clamp(14px,5vw,16px)] leading-[1.5] [text-wrap:balance] text-gray-600 sm:text-[clamp(16px,5vw,18px)]"
+        class="mb-8 text-[clamp(14px,5vw,16px)] leading-[1.5] [text-wrap:balance] text-gray-600 sm:mb-6 sm:text-[clamp(16px,5vw,18px)]"
       >
-        Master the interviewing, collaboration, and leadership skills that
-        actually get you hired and promoted in tech
+        Master the interviewing, collaboration, and leadership skills that win
+        clients, land roles, and grow your career in tech.
       </p>
       <div
         class="m-auto grid w-[min(90%,600px)] grid-cols-1 gap-6 sm:grid-cols-2"
@@ -37,17 +56,27 @@ import "../components/Fonts.astro";
           ><a
             href="#"
             class="group flex items-center justify-center gap-4 rounded-[10rem] border border-(--blue) px-2 py-4 text-[16px] font-bold text-(--blue) shadow-xl transition-all duration-200 ease-in-out hover:shadow-none"
-            >See Upcoming Events <iconify-icon
-              icon="teenyicons:top-right-outline"
-              class="text-(--blue) transition-all duration-200 ease-in-out group-hover:rotate-45"
-              width="15"
-              height="15"></iconify-icon></a
-          ></button
-        >
+            >See Upcoming Events
+            <div
+              class="relative flex h-6 w-6 items-center justify-center gap-2 overflow-hidden rounded-[50%]"
+            >
+              <iconify-icon
+                icon="teenyicons:top-right-outline"
+                class="absolute rotate-45 text-(--blue) transition-all duration-200 ease-in-out group-hover:translate-x-9"
+                width="15"
+                height="15"></iconify-icon>
+              <iconify-icon
+                icon="teenyicons:top-right-outline"
+                class="absolute right-11 rotate-45 text-(--blue) transition-all duration-200 ease-in-out group-hover:translate-x-10"
+                width="15"
+                height="15"></iconify-icon>
+            </div></a
+          >
+        </button>
         <button
           ><a
             href="#"
-            class="group flex items-center justify-center gap-4 rounded-[10rem] border border-(--pink) bg-(--pink) px-2 py-4 text-[16px] font-bold text-white transition-all duration-200 ease-in-out hover:border-(--blue) hover:bg-(--blue)"
+            class="group flex items-center justify-center gap-4 rounded-[10rem] border border-(--blue) bg-(--blue) px-2 py-4 text-[16px] font-bold text-white transition-all duration-200 ease-in-out hover:border-(--pink) hover:bg-(--pink)"
             ><iconify-icon
               icon="line-md:plus"
               class="rounded-4xl border border-white text-white transition-all duration-200 ease-in-out group-hover:rotate-90"
@@ -57,7 +86,7 @@ import "../components/Fonts.astro";
         >
       </div>
       <div
-        class="mt-8 sm:mt-6 flex flex-wrap items-center justify-center gap-2 text-lg text-gray-600"
+        class="mt-8 flex flex-wrap items-center justify-center gap-2 text-lg text-gray-600 sm:mt-6"
       >
         <div class="flex w-full justify-center">
           <img
@@ -92,9 +121,7 @@ import "../components/Fonts.astro";
   </section>
   <!-- End of hero page -->
   <!-- Arit speech start -->
-  <section
-    class="data-aos= bg-pink-50/50 py-20 text-gray-800" 
-  >
+  <section class="data-aos= bg-pink-50/50 py-20 text-gray-800">
     <div
       class="m-auto w-[min(95%,600px)] rounded-4xl border border-gray-200 bg-white p-8 shadow-2xl sm:p-12"
     >
@@ -145,13 +172,16 @@ import "../components/Fonts.astro";
       </div>
 
       <!-- Author -->
-      <div class="mt-10 flex items-center gap-4">
+      <div class="mt-10 flex items-center justify-end-safe gap-4">
         <img
           src="/images/QA-IMG.webp"
           class="h-14 w-14 rounded-full object-cover shadow-md"
           alt="Queen Arit Image"
         />
-        <p class="text-lg font-semibold text-(--blue)">Queen Arit</p>
+        <div>
+          <p class="text-lg font-semibold text-(--blue)">Queen Arit</p>
+          <p class="text-sm font-medium text-gray-600 italic">Founder</p>
+        </div>
       </div>
     </div>
   </section>
@@ -164,8 +194,8 @@ import "../components/Fonts.astro";
       <h2
         class="m-auto mb-10 w-[min(90%,950px)] text-center text-xl font-bold [text-wrap:balance] text-(--blue) sm:text-3xl"
       >
-        Be part of a community that gives you front-row access to the support
-        and tools you need to scale your tech journey.
+        Join a community that gives you front-row access to the tools and
+        support you need to level-up your tech journey.
       </h2>
       <div
         class="mb-10 grid [grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))] gap-8"
@@ -176,7 +206,7 @@ import "../components/Fonts.astro";
           <h4
             class="mb-8 border-b border-b-(--pink) pb-4 text-xl font-semibold [text-wrap:balance] text-(--blue)"
           >
-            Access to Exclusive Resources & Opportunities
+            Access to Resources & Opportunities
           </h4>
           <p
             class="text-[14px] leading-[1.5] tracking-wider [text-wrap:pretty] text-gray-700 sm:text-[16px]"
@@ -204,7 +234,7 @@ import "../components/Fonts.astro";
           class="items-center rounded-4xl border border-gray-300 px-4 py-10 shadow-2xl shadow-gray-200"
         >
           <h4
-            class="mb-8 border-b border-b-(--pink) pb-4 text-xl font-semibold [text-wrap:balance] text-(--blue)"
+            class="mb-8 border-b border-b-(--pink) pb-11 text-xl font-semibold [text-wrap:balance] text-(--blue)"
           >
             Be Part of a Motivated Tribe
           </h4>
@@ -219,7 +249,7 @@ import "../components/Fonts.astro";
       <a
         type="button"
         href="#"
-        class="group m-auto flex w-[min(95%,350px)] items-center justify-center gap-4 rounded-[10rem] border border-(--pink) bg-(--pink) px-2 py-4 text-[16px] font-bold text-white transition-all duration-200 ease-in-out hover:border-(--blue) hover:bg-(--blue)"
+        class="group m-auto flex w-[min(95%,350px)] items-center justify-center gap-4 rounded-[10rem] border border-(--blue) bg-(--blue) px-2 py-4 text-[16px] font-bold text-white transition-all duration-200 ease-in-out hover:border-(--pink) hover:bg-(--pink)"
         ><iconify-icon
           icon="line-md:plus"
           class="rounded-4xl border border-white text-white transition-all duration-200 ease-in-out group-hover:rotate-90"
@@ -391,6 +421,5 @@ import "../components/Fonts.astro";
     </div>
   </section>
   <!-- Testimonal end -->
-  <Blog />
   <Footer />
 </Layout>
