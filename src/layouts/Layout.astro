@@ -18,29 +18,12 @@ import "../components/Fonts.astro";
     <script
       src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"
     ></script>
-    <script>
-      const header = document.getElementById("scroll-header");
-      const hero = document.querySelector("#hero"); // Make sure your hero section has id="hero"
-
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (!entry.isIntersecting) {
-            header.classList.add("opacity-100", "translate-y-[5px]");
-          } else {
-            header.classList.remove("opacity-100", "translate-y-[5px]");
-          }
-        },
-        {
-          root: null,
-          threshold: 0,
-        },
-      );
-
-      if (hero) observer.observe(hero);
-    </script>
+    <script src="/Js/Script.js" defer></script>
+      
 
     <!-- Preline UI -->
-    <script src="https://cdn.jsdelivr.net/npm/preline@2.0.3/dist/preline.min.js"
-    ></script>
+     <script src="https://cdn.jsdelivr.net/npm/preline@2.0.3/dist/preline.min.js">
+    // <script src="https://unpkg.com/preline@latest/dist/preline.js"></script>
+    //  <script is:inline src="./node_modules/preline/dist/index.js"></script>
   </body>
 </html>

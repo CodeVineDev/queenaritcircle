@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Event from "../components/Events.astro";
 import Footer from "../components/MyFooter.astro";
+import Testimonial from "../components/Testimonials.astro";
 import "../components/Fonts.astro";
 import { Image } from "astro:assets";
 import aritLogo from "../assets/images/aritlogo.png";
@@ -14,7 +15,9 @@ import aritLogo from "../assets/images/aritlogo.png";
   <Navbar />
   <!-- Hero page start -->
   <section id="hero" class="flex items-center justify-center py-20">
-    <div class="m-auto w-[min(95%,1000px)] xl:pt-25 xl:pb-12 sm:pt-14 pb-8 text-center tracking-wider">
+    <div
+      class="m-auto w-[min(95%,1000px)] pb-8 text-center tracking-wider sm:pt-14 xl:pt-25 xl:pb-12"
+    >
       <p
         class="m-auto mb-8 w-max rounded-4xl border border-gray-200 px-5 py-3 text-sm font-bold text-(--blue) shadow-xl sm:mb-6"
       >
@@ -245,8 +248,8 @@ import aritLogo from "../assets/images/aritlogo.png";
           <p
             class="text-[14px] leading-[1.5] tracking-wider [text-wrap:pretty] text-gray-700 sm:text-[16px]"
           >
-            Surround yourself with like-minded early career techies who push,
-            challenge, and grow with you. No more growth in isolation.
+            Surround yourself with like-minded, early career techies who push,
+            challenge, and grow with you. No more stagnation in isolation.
           </p>
         </div>
       </div>
@@ -301,128 +304,6 @@ import aritLogo from "../assets/images/aritlogo.png";
     <!-- Benefits of Community end -->
   </section>
   <Event />
-  <!-- Testimonal start -->
-  <section class="py-20">
-    <div class="m-auto w-[min(95%,1150px)]">
-      <h2
-        class="mb-10 text-center text-xl font-bold [text-wrap:balance] text-(--blue) sm:text-3xl"
-      >
-        Members Testimonials
-      </h2>
-      <div
-        class="grid [grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))] gap-8"
-      >
-        <div class="rounded-4xl border border-gray-300 px-6 py-10 shadow-xl">
-          <p>
-            Before joining this community, I felt lost in my tech journey. But
-            now, I’ve got constant support, real feedback, and people who
-            actually get what I’m building. It's like having a tech family
-            backing me up!
-          </p>
-          <div class="mt-10 flex items-center gap-2">
-            <img
-              src="/images/QA-IMG.webp"
-              class="h-7 w-7 rounded-full object-cover shadow-md"
-              alt="Queen Arit Image"
-            />
-            <p class="text-sm font-semibold text-(--blue)">
-              Amina B., <span class="text-gray-400">Front-End Developer</span>
-            </p>
-          </div>
-        </div>
-        <div class="rounded-4xl border border-gray-300 px-6 py-10 shadow-xl">
-          <p>
-            Before joining this community, I felt lost in my tech journey. But
-            now, I’ve got constant support, real feedback, and people who
-            actually get what I’m building. It's like having a tech family
-            backing me up!
-          </p>
-          <div class="mt-10 flex items-center gap-2">
-            <img
-              src="/images/QA-IMG.webp"
-              class="h-7 w-7 rounded-full object-cover shadow-md"
-              alt="Queen Arit Image"
-            />
-            <p class="text-sm font-semibold text-(--blue)">
-              Amina B., <span class="text-gray-400">Front-End Developer</span>
-            </p>
-          </div>
-        </div>
-        <div class="rounded-4xl border border-gray-300 px-6 py-10 shadow-xl">
-          <p>
-            Before joining this community, I felt lost in my tech journey. But
-            now, I’ve got constant support, real feedback, and people who
-            actually get what I’m building. It's like having a tech family
-            backing me up!
-          </p>
-          <div class="mt-10 flex items-center gap-2">
-            <img
-              src="/images/QA-IMG.webp"
-              class="h-7 w-7 rounded-full object-cover shadow-md"
-              alt="Queen Arit Image"
-            />
-            <p class="text-sm font-semibold text-(--blue)">
-              Amina B., <span class="text-gray-400">Front-End Developer</span>
-            </p>
-          </div>
-        </div>
-        <div class="rounded-4xl border border-gray-300 px-6 py-10 shadow-xl">
-          <p>
-            Before joining this community, I felt lost in my tech journey. But
-            now, I’ve got constant support, real feedback, and people who
-            actually get what I’m building. It's like having a tech family
-            backing me up!
-          </p>
-          <div class="mt-10 flex items-center gap-2">
-            <img
-              src="images/QA-IMG.webp"
-              class="h-7 w-7 rounded-full object-cover shadow-md"
-              alt="Queen Arit Image"
-            />
-            <p class="text-sm font-semibold text-(--blue)">
-              Amina B., <span class="text-gray-400">Front-End Developer</span>
-            </p>
-          </div>
-        </div>
-        <div class="rounded-4xl border border-gray-300 px-6 py-10 shadow-xl">
-          <p>
-            Before joining this community, I felt lost in my tech journey. But
-            now, I’ve got constant support, real feedback, and people who
-            actually get what I’m building. It's like having a tech family
-            backing me up!
-          </p>
-          <div class="mt-10 flex items-center gap-2">
-            <img
-              src="images/QA-IMG.webp"
-              class="h-7 w-7 rounded-full object-cover shadow-md"
-              alt="Queen Arit Image"
-            />
-            <p class="text-sm font-semibold text-(--blue)">
-              Amina B., <span class="text-gray-400">Front-End Developer</span>
-            </p>
-          </div>
-        </div>
-        <div class="rounded-4xl border border-gray-300 px-6 py-10 shadow-xl">
-          <p>
-            Before joining this community, I felt lost in my tech journey. But
-            now, I’ve got constant support, real feedback, and people who
-            actually get what I’m building. It's like having a tech family
-            backing me up!
-          </p>
-          <div class="mt-10 flex items-center gap-2">
-            <img
-              src="images/QA-IMG.webp"
-              class="h-7 w-7 rounded-full object-cover shadow-md"
-              alt="Queen Arit Image"
-            />
-            <p class="text-sm font-semibold text-(--blue)">
-              Amina B., <span class="text-gray-400">Front-End Developer</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Testimonal end -->
+  <Testimonial />
   <Footer />
 </Layout>
