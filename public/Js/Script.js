@@ -1,5 +1,6 @@
  <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
  
+ 
 const header = document.getElementById("scroll-header");
       const hero = document.querySelector("#hero"); // Make sure your hero section has id="hero"
 
