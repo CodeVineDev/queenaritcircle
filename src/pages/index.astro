@@ -7,7 +7,10 @@ import Testimonial from "../components/Testimonials.astro";
 import "../components/Fonts.astro";
 import { Image } from "astro:assets";
 import aritLogo from "../assets/images/aritlogo.png";
+// import '../script/aos.js';
 ---
+<!-- <script type="module" defer src="/src/script/aos.js"></script> -->
+
 
 <Layout class="relative">
   <div class="absolute h-23 w-full bg-gradient-to-b from-(--pink) to-white">
@@ -124,7 +127,7 @@ import aritLogo from "../assets/images/aritlogo.png";
   </section>
   <!-- End of hero page -->
   <!-- Arit speech start -->
-  <section 
+  <section data-aos="fade-up"
     class="bg-pink-50/50 py-20 text-gray-800 shadow-lg shadow-pink-50/90"
   >
     <div
@@ -206,18 +209,10 @@ import aritLogo from "../assets/images/aritlogo.png";
         class="mb-10 grid [grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))] gap-8"
       >
         <div
-          class="items-center rounded-4xl border border-gray-300 px-4 py-10 shadow-2xl shadow-gray-200"
+          class="items-center h-[18rem] grid place-items-center rounded-4xl border border-gray-300 px-4 py-10 shadow-2xl shadow-gray-200"
         >
-          <div class="mb-4">
-            <div
-              class="m-auto w-max rounded-[50%] text-xl font-bold bg-(--blue) px-6 py-[15px] text-white"
-            >
-              1
-            </div>
-          </div>
-
           <h4
-            class="mb-4 text-xl font-semibold [text-wrap:balance] text-(--blue)"
+            class="pb-4 text-xl font-semibold [text-wrap:balance] text-(--blue) border-b border-b-(--pink)"
           >
             Access to Resources & Opportunities
           </h4>
@@ -229,17 +224,10 @@ import aritLogo from "../assets/images/aritlogo.png";
           </p>
         </div>
         <div
-          class="items-center rounded-4xl border border-gray-300 px-4 py-10 shadow-2xl shadow-gray-200"
+          class="items-center h-[18rem] grid place-items-center rounded-4xl border border-gray-300 px-4 py-10 shadow-2xl shadow-gray-200"
         >
-         <div class="mb-4">
-            <div
-              class="m-auto w-max rounded-[50%] text-xl font-bold bg-(--blue) px-6 py-[15px] text-white"
-            >
-              2
-            </div>
-          </div>
           <h4
-            class="mb-4 text-xl font-semibold [text-wrap:balance] text-(--blue)"
+            class="pb-4 text-xl font-semibold [text-wrap:balance] text-(--blue) border-b border-b-(--pink)"
           >
             Direct Support on Your Tech Journey
           </h4>
@@ -251,19 +239,12 @@ import aritLogo from "../assets/images/aritlogo.png";
           </p>
         </div>
         <div
-          class="items-center rounded-4xl border border-gray-300 px-4 py-10 shadow-2xl shadow-gray-200"
+          class="items-center h-[18rem] grid place-items-center rounded-4xl border border-gray-300 px-4 py-10 shadow-2xl shadow-gray-200"
         >
-         <div class="mb-4">
-            <div
-              class="m-auto w-max rounded-[50%] text-xl font-bold bg-(--blue) px-6 py-[15px] text-white"
-            >
-              3
-            </div>
-          </div>
           <div
-            class="mb-4 text-xl font-semibold [text-wrap:balance] text-(--blue)"
+            class="mb-4 pb-4 text-xl w-full font-semibold [text-wrap:balance] text-(--blue) border-b border-b-(--pink)"
           >
-            <h4 class="m-auto w-full sm:w-[min(90%,200px)]">
+            <h4 class="m-auto pb-1 sm:w-[min(90%,200px)] text-xl font-semibold [text-wrap:balance] text-(--blue) ">
               Be Part of a Motivated Tribe
             </h4>
           </div>
