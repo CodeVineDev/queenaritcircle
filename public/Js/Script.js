@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
               entry.target.classList.remove("opacity-0", "translate-y-10");
               entry.target.classList.add("opacity-100", "translate-y-0");
-            }, index * 50); // 150ms delay between each card
+            }, index * 80); // 150ms delay between each card
             observer.unobserve(entry.target); // run only once
           }
         });
